@@ -1,0 +1,31 @@
+{%extends 'basic_app/base.html'%}
+{%block body_block%}
+
+
+    <div class="jumbotron">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-12">
+            <div class="row">
+        <div class="col-md-8 col-sm-8">
+        <h2 class="card-title">Developer Name: {{user.fname}} {{user.lname}}</h2>
+        <p class="card-text"><strong>Contact: </strong> {{user.contact}} </p>
+        <p class="card-text"><strong>Email: </strong> {{user.email}} </p>
+        <p class="card-text"><strong>Portfolio website :</strong> {{user.portfolio}} </p>
+        <p class="card-text"><strong>Skills: </strong> {{user.team}} </p>
+        <p class="card-text"><strong>Projects </strong> {{user.projects}} </p>
+        <p class="card-text"><strong>Profile Description </strong> {{user.description}} </p>
+        </p>
+        </div>
+        <div class="col-md-4 col-sm-4 text-center">
+            <img src="{{user.profile_pic.url}} "  class="rounded-circle z-depth-1 btn-md" alt="Sample avatar" style="width:80% ;height:80%;">
+        </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+
+{%endblock%}

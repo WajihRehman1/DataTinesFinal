@@ -1,0 +1,48 @@
+
+{%extends "basic_app/base.html"%}
+{%block body_block%}
+{%load static%}
+<div class="container text-center">
+<h2>
+    About Us
+</h2>
+<h5 id="c1" >
+    Data-Tines is an organization which you
+    can trust for your projects related to App and
+    Web design.
+    We started as a small group of friends who have
+    taken an initiative to work as a team because
+    of our cohesion and the understanding of our domains.
+    The area in which we can facilitate our clients are <b>"Flutter App developement"</b> and <b>Django Web Developement</b>
+    as well as Logo Desin.
+</h5>
+</div>
+
+<section class="team-section text-center my-5">
+
+<h2 class="h1-responsive font-weight-bold my-5">Our amazing team</h2>
+<div class="jumbotron">
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+       {%for obj in user%}
+    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+
+      <div class="avatar mx-auto">
+        <img src="/media/{{obj.profile_pic}}"  class="rounded-circle z-depth-1" alt="Sample avatar" style="width:70% ;height:30%;">
+      </div>
+        <h5 class="font-weight-bold mt-4 mb-3"><a href="{{obj.id}}">{{obj.fname}} {{obj.lname}}</a></h5>
+      <p class="text-uppercase blue-text"><strong>{{obj.team}}</strong></p>
+      <p class="grey-text">He is an experienced {{obj.team}} developer in our team</p>
+
+
+    </div>
+       {%endfor%}
+  </div>
+    </div>
+</section>
+
+
+
+{%endblock%}
